@@ -21,9 +21,9 @@ export const App = () => {
 			setOperator('');
 			setIsResult(false);
 		} else if (!operator) {
-			setOperand1((prev) => prev + digit);
+			setOperand1((prev) => (prev === '0' ? digit : prev + digit));
 		} else {
-			setOperand2((prev) => prev + digit);
+			setOperand2((prev) => (prev === '0' ? digit : prev + digit));
 		}
 	};
 
